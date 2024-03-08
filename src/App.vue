@@ -1,16 +1,20 @@
 <script>
-import Projects from './components/Projects.vue';
+import AppHeader from './components/AppHeader.vue';
+import AppMain from './components/AppMain.vue';
+
 export default {
   components: {
-    Projects
+    AppMain,
+    AppHeader
   }
 }
 </script>
 <template lang="">
   <div>
-    <Projects />
+    <AppHeader />
+    <AppMain />
   </div>
 </template>
-<style lang="">
-  
+<style lang="scss">
+  @use './styles/general.scss'
 </style>
