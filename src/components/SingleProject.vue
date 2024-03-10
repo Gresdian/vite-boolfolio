@@ -14,15 +14,15 @@ export default {
         createExcerpt() {
             return this.project.description.substr(0, 20) + '...';
         },
-        getUrlImage(){
+/*         getUrlImage(){
             if(this.project.cover_image != null) {
                 image= '/storage/' + this.post.cover_image;
             }
             else {
-                image = '/img/aaaa.jpg';
+                image = 'img/aaaa.jpg';
             }
             return `${this.store.baseurl}/storage/${image}`
-        }
+        } */
     }
 
 }
@@ -30,8 +30,7 @@ export default {
 <template lang="">
     <div class="col-12 col-md-3">
         <div class="card m-3">
-            <img :src="getUrlImage()" alt="">
-            <img :src="project.cover_image != null ? `${store.baseurl}/storage/${project.cover_image}` : `${store.baseurl}/storage/aaaa.jpg`" alt="" class="card-img-top">
+            <img :src="`${store.baseurl}/storage/${project.cover_image}`"  alt="" class="card-img-top">
             <div class="card-body">
                 <h4>
                     {{ project.name }}

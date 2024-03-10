@@ -1,6 +1,12 @@
 <script>
+import { store } from '../store.js';
+
 export default {
-            
+    data() {
+        return {
+            store,
+        }
+    }, 
 }
 </script>
 <template lang="">
@@ -13,14 +19,8 @@ export default {
                 <div class="col-8">
                     <div class="float-end">
                         <ul class="list-unstyled d-flex align-items-center">
-                            <li>
-                                <a href='#'>Home</a>
-                            </li>
-                            <li>
-                                <a href='#'>Blog</a>
-                            </li>
-                            <li>
-                                <a href='#'>Contatti</a>
+                            <li v-for= "item, index in store.menuItems" :key="index">
+                                <router-link :to="{ name: item.name }">{{ item.label }}</router-link>
                             </li>
                         </ul>        
                     </div>

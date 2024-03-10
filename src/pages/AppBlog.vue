@@ -1,9 +1,9 @@
 <script>
-import SingleProject from './SingleProject.vue';
+import SingleProject from '../components/SingleProject.vue';
 import { store } from '../store.js';
 import axios from 'axios';
 export default {
-    name: 'AppMain',
+    name: 'AppBlog',
     components:{
         SingleProject
     },
@@ -41,4 +41,4 @@ export default {
 </template>
 <style lang="">
     
-</style>
+</style>./AppMain.vue/index.js
